@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
 :root {
   --backgroud: #f8f9fa;
   --primary-color: #a32eff;
@@ -8,6 +10,7 @@
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   background-color: var(--backgroud);
   color: var(--font-color);
   margin: 0;
@@ -47,16 +50,58 @@ a {
   background-color: var(--white-color);
   border: 1px solid var(--gray-color);
   border-radius: 7px;
-  padding: 15px;
+  padding: 10px 15px;
+}
+
+#navbar ol li.section-active {
+  box-shadow: 3px 3px 5px var(--gray-color);
 }
 
 #navbar ol li:focus,
 #navbar ol li:hover {
-  box-shadow: 3px 3px 5px var(--gray-color);
+  outline: none;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+#navbar ol li:focus .section-title .step,
+#navbar ol li:hover .section-title .step {
+  background-color: var(--primary-color);
+}
+
+#navbar ol li:focus .section-title .title,
+#navbar ol li:hover .section-title .title {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.section-title {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  align-items: center;
+  gap: 10px;
+  height: 35px;
+}
+
+.section-title .step {
+  background-color: var(--font-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  padding: 7px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section-active .step {
+  background-color: var(--primary-color);
+}
+
+.section-active .title {
+  font-weight: bold;
 }
 
 #main-doc {
-  max-width: 800px;
+  min-width: 400px;
   border-radius: 5px;
   background-color: var(--white-color);
   box-shadow: 0px 0px 10px var(--gray-color);
@@ -65,7 +110,7 @@ a {
   padding: 20px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 720px) {
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: 150px 1fr;
