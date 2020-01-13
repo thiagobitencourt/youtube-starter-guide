@@ -66,27 +66,31 @@ code {
   background-color: var(--white-color);
   border: 1px solid var(--gray-color);
   border-radius: 7px;
+}
+
+#navbar ol li a {
   padding: 10px 15px;
 }
 
-#navbar ol li.section-active {
+#navbar ol li a.section-active {
   box-shadow: 3px 3px 5px var(--gray-color);
 }
 
-#navbar ol li:focus,
-#navbar ol li:hover {
+#navbar ol li a:focus,
+#navbar ol li a:hover {
   outline: none;
   background-color: var(--primary-light);
   color: var(--primary-color);
+  border-radius: 7px;
 }
 
-#navbar ol li:focus .section-title .step,
-#navbar ol li:hover .section-title .step {
+#navbar ol li a:focus.section-title .step,
+#navbar ol li a:hover.section-title .step {
   background-color: var(--primary-color);
 }
 
-#navbar ol li:focus .section-title .title,
-#navbar ol li:hover .section-title .title {
+#navbar ol li a:focus.section-title .title,
+#navbar ol li a:hover.section-title .title {
   color: var(--primary-color);
   font-weight: bold;
 }
