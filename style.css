@@ -31,10 +31,20 @@ code {
   display: grid;
   gap: 15px;
   grid-template-columns: 300px 1fr;
+  height: 100vh;
+}
+
+.container aside {
+  overflow-y: auto;
 }
 
 .clicable {
   cursor: pointer;
+}
+
+#navbar {
+  display: grid;
+  height: 100%;
 }
 
 #navbar header {
@@ -45,6 +55,7 @@ code {
 }
 
 #navbar ol {
+  overflow-y: auto;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -110,9 +121,9 @@ code {
   border-radius: 5px;
   background-color: var(--white-color);
   box-shadow: 0px 0px 10px var(--gray-color);
-  height: calc(100% - 40px);
   margin: 20px;
   padding: 20px;
+  overflow-y: auto;
 }
 
 @media (max-width: 720px) {
