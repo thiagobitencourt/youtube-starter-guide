@@ -135,4 +135,16 @@ code {
     grid-template-columns: 1fr;
     grid-template-rows: 150px 1fr;
   }
+
+  .container #navbar ol {
+    display: flex;
+  }
+
+  .container #navbar ol .section-title .title {
+    display: none;
+  }
+
+  .container #navbar ol .section-title {
+    grid-template-columns: 32px;
+  }
 }
